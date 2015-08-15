@@ -10,7 +10,7 @@ namespace TableDrivenDevelopment.Helpers
     {
         public static string Talk(Animal Animal)
         {
-            return "Meow";
+            return Animal.Voice;
         }
     }
 }
