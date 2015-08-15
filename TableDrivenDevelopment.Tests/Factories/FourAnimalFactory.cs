@@ -9,6 +9,11 @@ namespace TableDrivenDevelopment.Tests.Factories
 {
     public class FourAnimalFactory
     {
+        /// <summary>
+        /// A factory that created a list of animals. 
+        /// A Cat, Dog Canary and Octopus
+        /// </summary>
+        /// <returns></returns>
         public List<Animal>  GetAnimals()
         {
             List<Animal>  animalList = new List<Animal>();
