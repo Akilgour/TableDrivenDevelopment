@@ -13,8 +13,8 @@ namespace TableDrivenDevelopment.Models
         public string Name { get; set; }
         public int NumberOfLegs { get; set; }
         public int NumberOfWings { get; set; }
-        public bool CanGoUnderwater { get; set; }
-        public bool CanFly { get; set; }
+        public bool? CanGoUnderwater { get; set; }
+        public bool? CanFly { get; set; }
         public string Voice { get; set; }
     }
 }

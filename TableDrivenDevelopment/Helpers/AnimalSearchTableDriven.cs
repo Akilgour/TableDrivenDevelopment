@@ -33,9 +33,15 @@ namespace TableDrivenDevelopment.Helpers
             //            select user;        
 
             var resultsAnimal = from animal in animalList
-                                where ((animal.Name != null && seachAnimal.Name != null && seachAnimal.Name != string.Empty) && animal.Name.Contains(seachAnimal.Name))
+                                where ((animal.Name != null      && seachAnimal.Name != null          && seachAnimal.Name != string.Empty) && animal.Name.Contains(seachAnimal.Name))
+                                || ((animal.NumberOfLegs != null && seachAnimal.NumberOfLegs != null) && animal.NumberOfLegs == seachAnimal.NumberOfLegs)
+                                || (seachAnimal.CanFly != null && animal.CanFly != null && animal.CanFly == seachAnimal.CanFly)
+                                || (seachAnimal.CanGoUnderwater != null && animal.CanGoUnderwater != null && animal.CanGoUnderwater == seachAnimal.CanGoUnderwater)
+
                                 select animal;
             return resultsAnimal.ToList();
+
+             
 
         }
 

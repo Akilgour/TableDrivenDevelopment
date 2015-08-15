@@ -44,7 +44,7 @@ namespace TableDrivenDevelopment.Tests.Factories
             {
                 Id = Guid.NewGuid(),
                 NumberOfLegs = 2,
-                CanFly = false,
+                CanFly = true,
                 CanGoUnderwater = false,
                 Name = "Canary",
                 Voice = "Chirp",
@@ -54,9 +54,9 @@ namespace TableDrivenDevelopment.Tests.Factories
             animalList.Add(new Animal()
             {
                 Id = Guid.NewGuid(),
-                NumberOfLegs = 2,
+                NumberOfLegs = 8,
                 CanFly = false,
-                CanGoUnderwater = false,
+                CanGoUnderwater = true,
                 Name = "Octopus",
                 Voice = "Bubble",
                 NumberOfWings = 2
