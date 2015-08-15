@@ -143,7 +143,24 @@ namespace TableDrivenDevelopment.Tests.Helpers
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
         }
-                
+
+        [TestMethod]
+        public void GetByNumberOfLegsOfLegsNull()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                NumberOfLegs = null
+            };
+
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 0);
+        }
+    
         [TestMethod]
         public void GetCanFlyIsTrue()
         {
@@ -177,7 +194,23 @@ namespace TableDrivenDevelopment.Tests.Helpers
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 3);
         }
-        
+
+        [TestMethod]
+        public void GetCanFlyIsNull()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                CanFly = null
+            };
+
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 0);
+        } 
 
         [TestMethod]
         public void GetCanGoUnderwaterIsTrue()
@@ -211,6 +244,23 @@ namespace TableDrivenDevelopment.Tests.Helpers
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 3);
+        }
+
+        [TestMethod]
+        public void GetCanGoUnderwaterIsNull()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                CanGoUnderwater = null
+            };
+
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 0);
         }
 
         [TestMethod]
@@ -248,6 +298,23 @@ namespace TableDrivenDevelopment.Tests.Helpers
         }
 
         [TestMethod]
+        public void GetNumberOfWingsIsNull()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                NumberOfWings = null
+            };
+
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 0);
+        }
+
+        [TestMethod]
         public void GetVoiceMeow()
         {
             //Arrange 
@@ -279,6 +346,40 @@ namespace TableDrivenDevelopment.Tests.Helpers
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 1);
+        }
+
+        [TestMethod]
+        public void GetVoiceNull()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                Voice = null
+            };
+
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 0);
+        }
+
+        [TestMethod]
+        public void GetVoiceStringEmpty()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                Voice = string.Empty 
+            };
+
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 0);
         }
 
         [TestMethod]
