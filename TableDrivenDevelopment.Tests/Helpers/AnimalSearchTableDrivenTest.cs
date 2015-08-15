@@ -22,7 +22,8 @@ namespace TableDrivenDevelopment.Tests.Helpers
             var resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
 
             //Assert
-            Assert.AreEqual(resultsAnimals.Count, 1);
+            Assert.AreEqual(resultsAnimals.Count, 4);
+            //Four Might seem odd but since its a or seach this makes sence
         }
 
         [TestMethod]
@@ -37,7 +38,8 @@ namespace TableDrivenDevelopment.Tests.Helpers
             var resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
 
             //Assert
-            Assert.AreEqual(resultsAnimals.Count, 1);
+            Assert.AreEqual(resultsAnimals.Count, 4);
+            //Four Might seem odd but since its a or seach this makes sence
         }
 
         [TestMethod]
@@ -279,5 +281,22 @@ namespace TableDrivenDevelopment.Tests.Helpers
             Assert.AreEqual(resultsAnimals.Count, 1);
         }
 
+        [TestMethod]
+        public void GetCatThatMeows()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                Name = "Cat",
+                Voice = "Meow"
+            };
+
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 1);
+        }
     }
 }
