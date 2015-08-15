@@ -419,5 +419,27 @@ namespace TableDrivenDevelopment.Tests.Helpers
             Assert.AreEqual(resultsAnimals.Count, 2);
             //Might seem odd buts its a or seach
         }
+
+        [TestMethod]
+        public void GetCatThatMeowsEveyThingElseNull()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                Name = "Cat",
+                CanFly = null,
+                CanGoUnderwater = null,
+                NumberOfLegs = null,
+                NumberOfWings = null,
+                Voice = null
+            };
+
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 1);
+        }
     }
 }
