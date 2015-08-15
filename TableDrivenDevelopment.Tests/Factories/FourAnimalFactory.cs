@@ -7,16 +7,16 @@ using TableDrivenDevelopment.Models;
 
 namespace TableDrivenDevelopment.Tests.Factories
 {
-    public class FourAnimalFactory
+    public static class FourAnimalFactory
     {
         /// <summary>
         /// A factory that created a list of animals. 
         /// A Cat, Dog Canary and Octopus
         /// </summary>
         /// <returns></returns>
-        public List<Animal>  GetAnimals()
+        public static List<Animal> GetAnimals()
         {
-            List<Animal>  animalList = new List<Animal>();
+            List<Animal> animalList = new List<Animal>();
 
             animalList.Add(new Animal()
             {
