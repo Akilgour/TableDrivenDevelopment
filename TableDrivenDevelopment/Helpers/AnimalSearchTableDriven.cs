@@ -39,6 +39,7 @@ namespace TableDrivenDevelopment.Helpers
 
                                 || (seachAnimal.CanFly != null && animal.CanFly != null && animal.CanFly == seachAnimal.CanFly)
                                 || (seachAnimal.CanGoUnderwater != null && animal.CanGoUnderwater != null && animal.CanGoUnderwater == seachAnimal.CanGoUnderwater)
+                                || ((animal.Voice != null && seachAnimal.Voice != null && seachAnimal.Voice != string.Empty) && animal.Voice.Contains(seachAnimal.Voice))
 
                                 select animal;
             return resultsAnimal.ToList();

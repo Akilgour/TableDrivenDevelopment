@@ -244,7 +244,40 @@ namespace TableDrivenDevelopment.Tests.Helpers
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 3);
         }
- 
+
+        [TestMethod]
+        public void GetVoiceMeow()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                Voice = "Meow"
+            };
+
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 1);
+        }
+
+        [TestMethod]
+        public void GetVoiceWoof()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                Voice = "Woof"
+            };
+
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 1);
+        }
 
     }
 }
