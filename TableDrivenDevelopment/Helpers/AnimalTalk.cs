@@ -8,9 +8,9 @@ namespace TableDrivenDevelopment.Helpers
 {
     public static class AnimalTalk
     {
-        public static string Talk(Animal Animal)
+        public static string Talk(Animal animal)
         {
-            return Animal.Voice;
+            return animal.Voice;
         }
     }
 }
