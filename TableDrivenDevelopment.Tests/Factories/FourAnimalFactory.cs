@@ -59,7 +59,7 @@ namespace TableDrivenDevelopment.Tests.Factories
                 CanGoUnderwater = true,
                 Name = "Octopus",
                 Voice = "Bubble",
-                NumberOfWings = 2
+                NumberOfWings = 0
             });
 
             return animalList;

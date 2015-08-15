@@ -141,7 +141,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
         }
-
+                
         [TestMethod]
         public void GetCanFlyIsTrue()
         {
@@ -176,22 +176,6 @@ namespace TableDrivenDevelopment.Tests.Helpers
             Assert.AreEqual(resultsAnimals.Count, 3);
         }
         
-        [TestMethod]
-        public void GetCanFlyIsNull()
-        {
-            //Arrange 
-            var animalList = FourAnimalFactory.GetAnimals();
-            var searchAnimal = new Animal()
-            {
-                CanFly = null
-            };
-
-            //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
-
-            //Assert
-            Assert.AreEqual(resultsAnimals.Count, 0);
-        }
 
         [TestMethod]
         public void GetCanGoUnderwaterIsTrue()
@@ -228,26 +212,39 @@ namespace TableDrivenDevelopment.Tests.Helpers
         }
 
         [TestMethod]
-        public void GetCanGoUnderwaterIsNull()
+        public void GetNumberOfWingsIsTwo()
         {
             //Arrange 
             var animalList = FourAnimalFactory.GetAnimals();
             var searchAnimal = new Animal()
             {
-                CanGoUnderwater = null
+                NumberOfWings = 2
             };
 
             //Act 
             List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
 
             //Assert
-            Assert.AreEqual(resultsAnimals.Count, 0);
+            Assert.AreEqual(resultsAnimals.Count, 1);
         }
 
+        [TestMethod]
+        public void GetNumberOfWingsIsZero()
+        {
+            //Arrange 
+            var animalList = FourAnimalFactory.GetAnimals();
+            var searchAnimal = new Animal()
+            {
+                NumberOfWings = 0
+            };
 
+            //Act 
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
 
-
-
+            //Assert
+            Assert.AreEqual(resultsAnimals.Count, 3);
+        }
+ 
 
     }
 }
