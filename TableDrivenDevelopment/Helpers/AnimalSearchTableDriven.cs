@@ -9,7 +9,7 @@ namespace TableDrivenDevelopment.Helpers
     public static class AnimalSearchTableDriven
     {
 
-        public static List<Animal> Search(List<Animal> animalList, Animal seachAnimal)
+        public static List<Animal> SearchOr(List<Animal> animalList, Animal seachAnimal)
         {
             var resultsAnimals = from animal in animalList
                                 where ((animal.Name != null      && seachAnimal.Name != null          && seachAnimal.Name != string.Empty) && animal.Name.Contains(seachAnimal.Name))

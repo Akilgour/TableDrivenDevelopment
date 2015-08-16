@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace TableDrivenDevelopment.Tests.Helpers
 {
     [TestClass]
-    public class AnimalSearchTableDrivenTest
+    public class AnimalSearchTableDrivenTest_SearchOr
     {
         [TestMethod]
         public void GetCatCount()
@@ -19,7 +19,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             var searchAnimal = CatFactory.GetCat();
 
             //Act 
-            var resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            var resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 4);
@@ -35,7 +35,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             var searchAnimal = DogFactory.GetDog();
 
             //Act 
-            var resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            var resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 4);
@@ -53,7 +53,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals[0].Name, "Cat");
@@ -70,7 +70,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals[0].Name, "Dog");
@@ -87,7 +87,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
@@ -104,7 +104,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
@@ -121,7 +121,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 2);
@@ -138,7 +138,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
@@ -155,7 +155,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
@@ -172,7 +172,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 1);
@@ -189,7 +189,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 3);
@@ -206,7 +206,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
@@ -223,7 +223,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 1);
@@ -240,7 +240,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 3);
@@ -257,7 +257,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
@@ -274,7 +274,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 1);
@@ -291,7 +291,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 3);
@@ -308,7 +308,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
@@ -325,7 +325,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 1);
@@ -342,7 +342,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 1);
@@ -359,7 +359,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
@@ -376,7 +376,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 0);
@@ -394,7 +394,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 1);
@@ -413,7 +413,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 2);
@@ -436,7 +436,7 @@ namespace TableDrivenDevelopment.Tests.Helpers
             };
 
             //Act 
-            List<Animal> resultsAnimals = AnimalSearchTableDriven.Search(animalList, searchAnimal);
+            List<Animal> resultsAnimals = AnimalSearchTableDriven.SearchOr(animalList, searchAnimal);
 
             //Assert
             Assert.AreEqual(resultsAnimals.Count, 1);
