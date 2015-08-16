@@ -24,5 +24,33 @@ namespace TableDrivenDevelopment.Helpers
             return resultsAnimals.ToList();
         }
 
+        public static List<Animal> SearchAnd(IEnumerable<Animal> animalList, Animal seachAnimal)
+        {
+            if (!string.IsNullOrEmpty(seachAnimal.Name))
+            {
+                animalList = animalList.Where(x => x.Name == seachAnimal.Name);
+            }
+            if (seachAnimal.NumberOfLegs != null)
+            {
+                animalList = animalList.Where(x => x.NumberOfLegs == seachAnimal.NumberOfLegs);
+            }
+            if (seachAnimal.NumberOfWings != null)
+            {
+                animalList = animalList.Where(x => x.NumberOfWings == seachAnimal.NumberOfWings);
+            }
+            if (seachAnimal.CanFly != null)
+            {
+                animalList = animalList.Where(x => x.CanFly == seachAnimal.CanFly);
+            }
+            if (seachAnimal.CanGoUnderwater != null)
+            {
+                animalList = animalList.Where(x => x.CanGoUnderwater == seachAnimal.CanGoUnderwater);
+            }
+            if (!string.IsNullOrEmpty(seachAnimal.Voice))
+            {
+                animalList = animalList.Where(x => x.Voice == seachAnimal.Voice);
+            }
+            return animalList.ToList();
+        }
     }
 }

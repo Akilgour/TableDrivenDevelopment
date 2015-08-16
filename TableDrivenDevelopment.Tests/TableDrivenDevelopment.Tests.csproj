@@ -116,6 +116,7 @@
     <Compile Include="Factories\CatFactory.cs" />
     <Compile Include="Factories\DogFactory.cs" />
     <Compile Include="Factories\FourAnimalFactory.cs" />
+    <Compile Include="Helpers\AnimalSearchTableDrivenTest_SearchAnd.cs" />
     <Compile Include="Helpers\AnimalSearchTableDrivenTest_SearchOr.cs" />
     <Compile Include="Helpers\AnimalTalkTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
